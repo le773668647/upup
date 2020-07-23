@@ -36,6 +36,7 @@ public class ExcelOperation {
 
     public static void main(String[] args) {
         ExcelOperation excelOperation = new ExcelOperation();
+        //读取所有sheet 从第二行开始,不包括表头
         excelOperation.readExcel(0,1);
     }
 
