@@ -1,5 +1,7 @@
 package exercise;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,14 +15,18 @@ import java.util.stream.Collectors;
  */
 public class ExerciseTest {
     public static void main(String[] args) {
-        List<Person> personList = new ArrayList<>();
-        personList.add(new Person("a",12));
-        personList.add(new Person("b",13));
-        Map<String,Person> map =personList.stream().collect(Collectors.toMap(Person::getName, Function.identity()));
-        System.out.println(map);
-        System.out.println(Arrays.asList(",".split(","))
-                .parallelStream()
-                .map(a -> Long.parseLong(a.toString()))
-                .collect(Collectors.toList()).size());
+//        List<Person> personList = new ArrayList<>();
+//        personList.add(new Person("a",12));
+//        personList.add(new Person("b",13));
+//        Map<String,Person> map =personList.stream().collect(Collectors.toMap(Person::getName, Function.identity()));
+//        System.out.println(map);
+//        System.out.println(Arrays.asList(",".split(","))
+//                .parallelStream()
+//                .map(a -> Long.parseLong(a.toString()))
+//                .collect(Collectors.toList()).size());
+        String a = "";
+        System.out.println(StringUtils.isBlank(a));
+        int c = 1;
+
     }
 }
