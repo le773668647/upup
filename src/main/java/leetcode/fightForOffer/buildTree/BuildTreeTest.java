@@ -8,13 +8,14 @@ import java.util.HashMap;
  */
 public class BuildTreeTest {
 
-    //存放的是前序遍历,值和index
+    //存放的是中序遍历,值和index
     HashMap<Integer, Integer> dic = new HashMap<>();
     int[] po;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         po = preorder;
-        for(int i = 0; i < inorder.length; i++)
+        for(int i = 0; i < inorder.length; i++){
             dic.put(inorder[i], i);
+        }
         return recur(0, 0, inorder.length - 1);
     }
 
