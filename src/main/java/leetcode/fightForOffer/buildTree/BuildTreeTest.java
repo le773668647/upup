@@ -7,6 +7,8 @@ import java.util.HashMap;
  * @create 2020-06-22 下午12:28
  */
 public class BuildTreeTest {
+
+    //存放的是前序遍历,值和index
     HashMap<Integer, Integer> dic = new HashMap<>();
     int[] po;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
@@ -15,6 +17,7 @@ public class BuildTreeTest {
             dic.put(inorder[i], i);
         return recur(0, 0, inorder.length - 1);
     }
+
     TreeNode recur(int pre_root, int in_left, int in_right) {
         if(in_left > in_right) return null;
         TreeNode root = new TreeNode(po[pre_root]);
