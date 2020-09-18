@@ -3,7 +3,7 @@ package leetcode.fightForOffer.buildTree;
 /**
  * @author zzzz
  * @create 2020-06-18 下午7:53
- * 剑指offer26 树的子结构
+ * 剑指offer27 镜像二叉树
  */
 public class MirrorTreeTest {
     public TreeNode mirrorTree(TreeNode root) {
