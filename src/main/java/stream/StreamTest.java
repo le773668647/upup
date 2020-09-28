@@ -106,9 +106,25 @@ public class StreamTest {
     public static void main(String[] args) {
         StreamTest test = new StreamTest();
         List<Test> list =new ArrayList<>();
+        list.add(new Test("a",11));
         list.add(new Test("a",12));
         list.add(new Test("b",13));
-        System.out.println(test.listSortDesc(list));
-    }
+        list.add(new Test("b",14));
+        list.add(new Test("b",15));
 
+//        Map<String, List<Test>> skuMap = list.stream()
+//                .collect(Collectors.toMap(
+//                        Test::getName, a -> new ArrayList<Test>() {{
+//                            add(a);
+//                        }}, (o1, o2) -> new ArrayList<Test>(o1) {{
+//                            add(o2.get(0));
+//                        }})
+//                );
+//
+//        System.out.println(skuMap);
+        for (int i = 0; i < list.size(); i++) {
+            if (i==2)break;
+            System.out.println(list.get(i));
+        }
+    }
 }
