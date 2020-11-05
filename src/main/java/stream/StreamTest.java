@@ -1,9 +1,6 @@
 package stream;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -104,13 +101,27 @@ public class StreamTest {
     }
 
     public static void main(String[] args) {
-        StreamTest test = new StreamTest();
-        List<Test> list =new ArrayList<>();
-        list.add(new Test("a",11));
-        list.add(new Test("a",12));
-        list.add(new Test("b",13));
-        list.add(new Test("b",14));
-        list.add(new Test("b",15));
+        LinkedList linkedList = new LinkedList();
+//        StreamTest test = new StreamTest();
+//        List<Test> list =new ArrayList<>();
+//        list.add(new Test("a",11));
+//        list.add(new Test("a",12));
+//        list.add(new Test("b",13));
+//        list.add(new Test("b",14));
+//        list.add(new Test("b",15));
+//
+//        System.out.println(list.stream().filter(i ->
+//            i.getAge()==13
+//        ).collect(Collectors.toList()));
+//        for (int i = 0; i < list.size(); i++) {
+//            if (list.get(i).getAge()==13){
+//                list.remove(i);
+//                i--;
+//            }else {
+//                System.out.println(list.get(i).getAge());
+//
+//            }
+//        }
 
 //        Map<String, List<Test>> skuMap = list.stream()
 //                .collect(Collectors.toMap(
@@ -122,9 +133,23 @@ public class StreamTest {
 //                );
 //
 //        System.out.println(skuMap);
-        for (int i = 0; i < list.size(); i++) {
-            if (i==2)break;
-            System.out.println(list.get(i));
+//        for (int i = 0; i < list.size(); i++) {
+//            if (i==2)break;
+//            System.out.println(list.get(i));
+//        }
+//        System.out.println("200g*1袋/件".substring(0,"200g*1袋/件".length()-3));
+//
+//
+//        System.out.println(" 啊啊 ".replaceAll(" ","").length());
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (j==3){
+                    break;
+                }
+                System.out.println( i + "," + j);
+            }
         }
+        
     }
 }
